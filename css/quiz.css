@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georama', sans-serif;
+    overflow-x: hidden;
+}
+
+.slider-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transition: left 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.slide.active {
+    left: 0;
+}
+
+.slide.prev {
+    left: -100%;
+}
+
+/* Slide 1 */
+#slide1 {
+    background: #96C5B6;
+    left: 0;
+}
+
+#slide1 h1 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 900px;
+    font-weight: 300;
+}
+
+.btn-primary {
+    background: #5B8FD1;
+    color: white;
+    border: 3px solid white;
+    padding: 18px 60px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* Slide 2 */
+#slide2 {
+    background: #5B8FD1;
+}
+
+#slide2 h2, #slide3 h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+.cover-options {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.cover-card {
+    background: #F4A5B9;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 280px;
+}
+
+.cover-card:hover {
+    transform: translateY(-5px);
+}
+
+.cover-card.selected {
+    background: #96C5B6;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+}
+
+.cover-image {
+    width: 100%;
+    aspect-ratio: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 5px;
+}
+
+.cover-image img {
+    max-width: 100%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.navigation {
+    position: fixed;
+    bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.btn-nav {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-nav:hover {
+    background: white;
+    color: #5B8FD1;
+}
+
+.btn-nav:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Slide 3 */
+#slide3 {
+    background: #5B8FD1;
+}
+
+.preview-container {
+    background: #A7D4BA;
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 60px;
+}
+
+.preview-planner {
+    display: flex;
+    gap: 0;
+    background: white;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.preview-cover, .preview-page {
+    height: 400px;
+}
+
+.preview-cover {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-cover img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.preview-page {
+    width: 300px;
+    background: #E8E8F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-page img {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+}
+
+.preview-text {
+    color: white;
+    text-align: right;
+    margin-left: 40px;
+}
+
+.preview-text p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* Slide 4 */
+#slide4 {
+    background: #f3f3f3;
+}
+
+#slide4 h2 {
+    color: #5B8FD1;
+    margin: 50px 0;
+    font-weight: 400;
+}
+
+.color-selection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.miolo-preview {
+    width: 350px;
+    height: 500px;
+    background: white;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.miolo-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.color-options {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.color-circle:hover {
+    transform: scale(1.1);
+}
+
+.color-circle.selected {
+    border-color: #392c29;
+    box-shadow: 0 0 0 3px white, 0 0 0 6px #392c29;
+}
+
+.color-vermelho { background: #8B4357; }
+.color-azul { background: #5B8FD1; }
+.color-roxo { background: #6B3E7A; }
+.color-verde { background: #6B9B8C; }
+.color-preto { background: #2C2C2C; }
+
+/* Slide 5 */
+#slide5 {
+    background: #5B8FD1;
+}
+
+#slide5 h2 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+.final-preview {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.final-card {
+    background: #F4A5B9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+}
+
+.final-image {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.final-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#finalBook img {
+    width: auto;
+    height: stretch;
+    object-fit: cover;
+}
+
+.btn-conclude {
+    background: white;
+    color: #5B8FD1;
+    border: none;
+    padding: 18px 60px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-conclude:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}

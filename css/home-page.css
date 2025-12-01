@@ -1,0 +1,149 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: Georama, sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    height: 100%;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.header-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: #ECEAE3;
+}
+.header-object {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    padding: 0 25px;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+.header-object img {
+    width: auto;
+    height: 50px;
+    position: relative;
+    display: block;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.welcome-section-container {
+    background-color: #96c5b6;
+    min-height: 600px;
+    width: 100%;
+}
+
+.welcome-section-container {
+    width: 100%;
+    height: 100%;
+}
+
+.quiz-title-span {
+    display: flex;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    padding-top: 210px;
+}
+.quiz-title {
+    color: #ECEAE3;
+    height: max-content;
+    width: 60%;
+    font-size: 46px;
+    font-weight: 500;
+}
+.start-quiz-button-container {
+    text-align: center;
+    margin-top: 80px;
+}
+.start-quiz-button {
+    background-color: #498BD3;
+    height: 90px;
+    width: 280px;
+    border-radius: 90px;
+    border-color: #FFF;
+    border-width: 5px;
+    border-style: solid;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition-property: all;
+    transition-duration: 300ms;
+    
+}
+
+/* Heartbeat button animation */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  5% { transform: scale(1.1); }
+  10% { transform: scale(1); }
+  15% { transform: scale(1.1); }
+  20% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  /*
+    Animation name: batida-coracao
+    Duration: 0.5s
+    Contagem de repetições: 2 (duas vezes)
+    Função de temporização: ease-in-out (suave)
+  */
+  animation: heartbeat 0.5s 2 ease-in-out;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 8s;
+}
+
+
+.start-quiz-button:hover {
+    background-color: #7b1a3a;
+    transform: scale(1.2) !important;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Planner</title>
+    <link rel="stylesheet" href="css/quiz.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="slider-container">
+        <!-- Slide 1 -->
+        <div class="slide active" id="slide1">
+            <h1>O nosso planner chegou para ser o seu guia no mundo de estudos</h1>
+            <button class="btn-primary" onclick="nextSlide()">Montar o meu!</button>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide" id="slide2">
+            <h2>Escolha a capa que mais combina com você</h2>
+            <div class="cover-options">
+                <div class="cover-card" onclick="selectCover('chave')">
+                    <div class="cover-image">
+                      <img src="img/book-key.png" alt="book key cover">
+                    </div>
+                </div>
+                <div class="cover-card" onclick="selectCover('pena')">
+                    <div class="cover-image">
+                      <img src="img/book-feather.png" alt="book key cover">
+                    </div>
+                </div>
+                <div class="cover-card" onclick="selectCover('xadrez')">
+                    <div class="cover-image">
+                      <img src="img/book-chess.png" alt="book key cover">
+                    </div>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="btn-nav" onclick="prevSlide()">← Voltar</button>
+                <button class="btn-nav" id="btnNext2" onclick="nextSlide()" disabled>Próximo →</button>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" id="slide3">
+            <div style="display: flex; align-items: center; gap: 40px;">
+                <div class="preview-container">
+                    <div class="preview-planner">
+                        <div class="preview-cover" id="previewCover"></div>
+                    </div>
+                </div>
+                <div class="preview-text">
+                    <p>Aaaaa essa capa é linda, você tem um ótimo gosto.</p>
+                    <p style="margin-top: 20px;">Agora vamos para as folhas?</p>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="btn-nav" onclick="prevSlide()">← Voltar</button>
+                <button class="btn-nav" onclick="nextSlide()">Próximo →</button>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide" id="slide4">
+            <h2>Agora vamos escolher a cor do texto, qual desses você mais gostou?</h2>
+            <div class="color-selection">
+                <div class="miolo-preview" id="mioloPreview">
+                    <img src="img/miolo-vermelho.png" alt="Miolo" id="mioloImage">
+                </div>
+                <div class="color-options">
+                    <div class="color-circle color-vermelho selected" onclick="selectColor('vermelho')"></div>
+                    <div class="color-circle color-azul" onclick="selectColor('azul')"></div>
+                    <div class="color-circle color-roxo" onclick="selectColor('roxo')"></div>
+                    <div class="color-circle color-verde" onclick="selectColor('verde')"></div>
+                    <div class="color-circle color-preto" onclick="selectColor('cinza')"></div>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="btn-nav" onclick="prevSlide()">← Voltar</button>
+                <button class="btn-nav" onclick="nextSlide()">Próximo →</button>
+            </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide" id="slide5">
+            <h2>Uau, você tem um ótimo gosto!</h2>
+            <div class="final-preview">
+                <div class="final-card">
+                    <div class="final-image" id="finalBook"></div>
+                </div>
+                <div class="final-card">
+                    <div class="final-image" id="finalCover"></div>
+                </div>
+                <div class="final-card">
+                    <div class="final-image" id="finalMiolo"></div>
+                </div>
+            </div>
+            <button class="btn-conclude" onclick="location.reload()">Concluir</button>
+        </div>
+    </div>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>
