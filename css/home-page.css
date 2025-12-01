@@ -88,7 +88,7 @@ table {
     text-align: center;
     vertical-align: middle;
     justify-content: center;
-    padding-top: 210px;
+    padding-top: 120px;
 }
 .quiz-title {
     color: #ECEAE3;
@@ -103,19 +103,19 @@ table {
 }
 .start-quiz-button {
     background-color: #498BD3;
-    height: 90px;
-    width: 280px;
-    border-radius: 90px;
+    padding: 18px 60px;
+    border-radius: 50px;
     border-color: #FFF;
-    border-width: 5px;
+    border-width: 3px;
     border-style: solid;
     color: #fff;
     font-size: 24px;
+    text-transform: uppercase;
     font-weight: 600;
+    letter-spacing: 1px;
     cursor: pointer;
 
-    transition-property: all;
-    transition-duration: 300ms;
+    transition: all 0.3s ease;
     
 }
 
