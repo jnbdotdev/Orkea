@@ -79,11 +79,11 @@ function updateFinalPreview() {
         imgCover = `<img src="img/cover-key.png" alt="Opened cover key">`;
         imgBook = `<img src="img/book-key.png" alt="Opened cover key">`;
     } else if (selectedCover === 'pena') {
-        imgCover = `<img src="img/cover-feather.png" alt="Opened cover key">`;
-        imgBook = `<img src="img/book-key.png" alt="Opened cover key">`;
+        imgCover = `<img src="img/cover-feather.png" alt="Opened cover feather">`;
+        imgBook = `<img src="img/book-feather.png" alt="Opened cover feather">`;
     } else if (selectedCover === 'xadrez') {
-        imgCover = `<img src="img/cover-chess.png" alt="Opened cover key">`;
-        imgBook = `<img src="img/book-key.png" alt="Opened cover key">`;
+        imgCover = `<img src="img/cover-chess.png" alt="Opened cover chess">`;
+        imgBook = `<img src="img/book-chess.png" alt="Opened cover chess">`;
     }
     
     finalCover.innerHTML = imgCover;
